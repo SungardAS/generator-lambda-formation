@@ -25,7 +25,7 @@ yo lambda-formation:resource
 
 ## lambda-formation
 Check out the main repository for more on
-[lambda-formation](https://github.io/SungadAS/lambda-formation)
+[lambda-formation](https://github.com/SungardAS/lambda-formation)
 
 
 ## Getting To Know Yeoman
