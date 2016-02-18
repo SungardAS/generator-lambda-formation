@@ -13,8 +13,20 @@ npm install -g generator-lambda-formation
 Then generate your new project:
 
 ```bash
-yo lambda-formation
+yo lambda-formation:project
 ```
+
+Then generate some resources:
+
+```bash
+cd PROJECT_NAME
+yo lambda-formation:resource
+```
+
+## lambda-formation
+Check out the main repository for more on
+[lambda-formation](https://github.io/SungadAS/lambda-formation)
+
 
 ## Getting To Know Yeoman
 
