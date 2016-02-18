@@ -1,0 +1,15 @@
+{
+  "name": "<%= projectName %>",
+  "version": "0.1.0",
+  "description": "Lambda Formation project",
+  "license": "Apache-2.0",
+  "keywords": [
+    "lamba-formation"
+  ],
+  "dependencies": {
+    "aws-sdk": "^2.2.36",
+    "cfn-responder": "*",
+    "lambda-formation": "*"
+  }
+}
+

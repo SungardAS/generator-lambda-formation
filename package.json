@@ -1,0 +1,48 @@
+{
+  "name": "generator-lambda-formation",
+  "version": "0.1.0",
+  "description": "Yeoman generator for creating Lambda projects compatible with CloudFormation",
+  "homepage": "",
+  "author": "kevin.mcgrath@sungardas.com",
+  "files": [
+    "app",
+    "router"
+  ],
+  "main": "index.js",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "yeoman-generator": "^0.22.5",
+    "yeoman-assert": "^2.0.0",
+    "eslint-config-xo-space": "^0.7.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "npm-name": "^2.1.0",
+    "underscore.string": "^3.2.3",
+    "yeoman-generator": "^0.21.1",
+    "yosay": "^1.1.0"
+  },
+  "scripts": {
+    "test": "gulp",
+    "prepublish": "gulp prepublish"
+  },
+  "license": "Apache-2.0",
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "SungardAS/generator-lambda-formation"
+}
