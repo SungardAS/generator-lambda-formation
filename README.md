@@ -1,5 +1,6 @@
 # generator-lambda-formation [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> Yeoman generator for creating Lambda projects compatible with CloudFormation
+> Yeoman generator for creating
+> [lambda-formation](https://github.com/SungardAS/lambda-formation) projects.
 
 ## Installation
 
@@ -34,7 +35,7 @@ Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he
 
 ## License
 
-Apache-2.0 © [kevin.mcgrath@sungardas.com]()
+Apache-2.0 ©
 
 
 [npm-image]: https://badge.fury.io/js/generator-lambda-formation.svg
