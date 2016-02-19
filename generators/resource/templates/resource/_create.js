@@ -10,7 +10,15 @@ var create = function (err, event, context) {
     return util.done(err);
   }
 
-  // REPLACE THIS WITH CUSTOM RESOURCE CREATE CODE
+  /*
+    Here is where CREATE code should be placed.
+
+    Always call util.done when finished to end the lambda
+    execution.
+
+    util.done(err,event,context, data, physicalResourceId)
+  */
+
   util.done('CREATE NOT IMPLEMENTED', event, context, {}, 'ID');
 };
 

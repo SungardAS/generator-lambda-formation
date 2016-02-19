@@ -10,7 +10,15 @@ var update = function (err, event, context) {
     return util.done(err);
   }
 
-  // REPLACE THIS WITH CUSTOM RESOURCE UPDATE CODE
+  /*
+    Here is where UPDATE code should be placed.
+
+    Always call util.done when finished to end the lambda
+    execution.
+
+    util.done(err,event,context, data, physicalResourceId)
+  */
+
   util.done('UPDATE NOT IMPLEMENTED', event, context, {}, 'ID');
 };
 

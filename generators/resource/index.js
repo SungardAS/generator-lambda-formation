@@ -1,6 +1,5 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var path = require('path');
 
 module.exports = yeoman.Base.extend({
   prompting: {
@@ -10,7 +9,7 @@ module.exports = yeoman.Base.extend({
 
       var prompts = [{
         name: 'resourceName',
-        message: 'What\'s the name of your project?'
+        message: 'What\'s the name of your resource?'
       }];
 
       this.prompt(prompts, function (props) {
@@ -42,13 +41,6 @@ module.exports = yeoman.Base.extend({
       this.destinationPath('lib', 'resources', this.resourceName, 'delete.js'),
       {resourceName: this.resourceName}
     );
-  },
-
-  install: function () {
-    var origDir = process.cwd();
-    var npmdir = path.join(process.cwd(), 'lib', 'resources', this.resourceName);
-    process.chdir(npmdir);
-    this.installDependencies();
-    process.chdir(origDir);
   }
+
 });
