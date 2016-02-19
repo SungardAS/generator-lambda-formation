@@ -10,8 +10,16 @@ var destroy = function (err, event, context) {
     return util.done(err);
   }
 
-  // REPLACE THIS WITH CUSTOM RESOURCE DELETE CODE
-  util.done('DELETE NOT IMPLEMENTED', event, context, {}, 'ID');
+  /*
+    Here is where DELETE code should be placed.
+
+    Always call util.done when finished to end the lambda
+    execution.
+
+    util.done(err,event,context, data)
+  */
+
+  util.done('DELETE NOT IMPLEMENTED', event, context, {});
 };
 
 /* Do not change this function */
