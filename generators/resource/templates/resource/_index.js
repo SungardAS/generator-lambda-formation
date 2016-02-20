@@ -1,3 +1,5 @@
-var resource = require('lambda-formation').resource.index;
+var resourceHandler = require('lambda-formation').resource.handler;
 
-module.exports.handler = resource;
+module.exports.handler = function () {
+  resourceHandler.apply(this, arguments);
+};

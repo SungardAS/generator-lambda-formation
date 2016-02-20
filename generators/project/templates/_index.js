@@ -1,3 +1,5 @@
-var index = require('lambda-formation').projectIndex;
+var projectHandler = require('lambda-formation').project.handler;
 
-module.exports.handler = index;
+module.exports.handler = function () {
+  projectHandler.apply(this, arguments);
+};
