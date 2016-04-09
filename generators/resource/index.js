@@ -2,10 +2,19 @@
 var yeoman = require('yeoman-generator');
 
 module.exports = yeoman.Base.extend({
+  constructor: function () {
+    yeoman.Base.apply(this, arguments);
+
+    this.argument('resourceName', {type: String, required: false});
+  },
   prompting: {
 
     askForProjectName: function () {
       var done = this.async();
+
+      if (this.resourceName) {
+        return done();
+      }
 
       var prompts = [{
         name: 'resourceName',

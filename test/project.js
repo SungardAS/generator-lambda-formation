@@ -1,15 +1,9 @@
 'use strict';
 var path = require('path');
 var assert = require('yeoman-assert');
-var helpers = require('yeoman-generator').test;
+var helpers = require('yeoman-test');
 
-describe('generator-lambda-formation:project', function () {
-  before(function (done) {
-    helpers.run(path.join(__dirname, '../generators/project'))
-      .withPrompts({projectName: 'test'})
-      .on('end', done);
-  });
-
+var checkFiles = function () {
   it('creates files', function () {
     assert.file([
       'test/.gitignore',
@@ -19,5 +13,25 @@ describe('generator-lambda-formation:project', function () {
       'test/README.md',
       'test/lib/resources/README.md'
     ]);
+  });
+};
+
+describe('generator-lambda-formation:project', function () {
+  describe('with prompt', function () {
+    before(function (done) {
+      helpers.run(path.join(__dirname, '../generators/project'))
+        .withPrompts({projectName: 'test'})
+        .on('end', done);
+    });
+    checkFiles();
+  });
+
+  describe('with argument', function () {
+    before(function (done) {
+      helpers.run(path.join(__dirname, '../generators/project'))
+        .withArguments('test')
+        .on('end', done);
+    });
+    checkFiles();
   });
 });

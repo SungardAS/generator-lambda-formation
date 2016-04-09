@@ -26,11 +26,14 @@
     "gulp-coveralls": "^0.1.0"
   },
   "dependencies": {
-    "chalk": "^1.1.1",
+    "chalk": "^1.1.3",
+    "gulp-istanbul": "^0.10.4",
+    "gulp-nsp": "^2.4.0",
     "npm-name": "^2.1.0",
-    "underscore.string": "^3.2.3",
+    "underscore.string": "^3.3.4",
+    "yeoman-assert": "^2.1.2",
     "yeoman-generator": "^0.22.5",
-    "yosay": "^1.1.0"
+    "yosay": "^1.1.1"
   },
   "scripts": {
     "test": "gulp",

@@ -3,10 +3,19 @@ var yeoman = require('yeoman-generator');
 var path = require('path');
 
 module.exports = yeoman.Base.extend({
+  constructor: function () {
+    yeoman.Base.apply(this, arguments);
+
+    this.argument('projectName', {type: String, required: false});
+  },
   prompting: {
 
     askForProjectName: function () {
       var done = this.async();
+
+      if (this.projectName) {
+        return done();
+      }
 
       var prompts = [{
         name: 'projectName',
