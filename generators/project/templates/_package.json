@@ -6,6 +6,9 @@
   "keywords": [
     "lamba-formation"
   ],
+  "scripts": {
+    "dist": "zip -FSr dist/spotinst-lambda.zip * -x \"*.git*\" \"dist/*\""
+  },
   "dependencies": {
     "aws-sdk": "^2.2.36",
     "cfn-responder": "^0.1.0",
