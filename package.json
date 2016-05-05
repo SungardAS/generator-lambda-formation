@@ -1,6 +1,6 @@
 {
   "name": "generator-lambda-formation",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "publishConfig": {
     "tag": "latest"
   },
@@ -16,6 +16,7 @@
     "yeoman-generator"
   ],
   "devDependencies": {
+    "eslint-config-xo": "^0.14.1",
     "eslint-config-xo-space": "^0.13.0",
     "gulp": "^3.9.1",
     "gulp-coveralls": "^0.1.4",
