@@ -1,6 +1,7 @@
 'use strict';
-var yeoman = require('yeoman-generator');
+var mkdirp = require('mkdirp');
 var path = require('path');
+var yeoman = require('yeoman-generator');
 
 module.exports = yeoman.Base.extend({
   constructor: function () {
@@ -67,6 +68,7 @@ module.exports = yeoman.Base.extend({
   install: function () {
     var origDir = process.cwd();
     var npmdir = path.join(process.cwd(), this.projectName);
+    mkdirp.sync(this.destinationPath(this.projectName, 'dist'));
     process.chdir(npmdir);
     this.installDependencies({
       callback: function () {
