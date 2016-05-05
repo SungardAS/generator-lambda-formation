@@ -6,6 +6,7 @@ var helpers = require('yeoman-test');
 var checkFiles = function () {
   it('creates files', function () {
     assert.file([
+      'test/dist',
       'test/.gitignore',
       'test/index.js',
       'test/LICENSE',
