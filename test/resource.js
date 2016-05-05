@@ -25,10 +25,10 @@ describe('generator-lambda-formation:resource', function () {
   });
 
   describe('with argument', function () {
-    before(function (done) {
+    before(function () {
       helpers.run(path.join(__dirname, '../generators/resource'))
         .withArguments('test')
-        .on('end', done);
+        .toPromise();
     });
 
     checkFiles();

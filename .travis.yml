@@ -1,6 +1,15 @@
 language: node_js
 node_js:
-  - stable
-  - v5
-  - v4
-  - '0.12'
+- 6
+- 5
+- 4
+- '0.12'
+deploy:
+  provider: npm
+  email: as.us.labs@sungardas.com
+  api_key:
+    secure: ehhThLU45eChZzRF+x+8vwDo7rqkSSH2sm1H7SNhIAVQOe//lUezweGcldPoSY3tQuQPXlTuH7/uBObXYyBjDnUB+6dAshjInhy8jFlk096gs/X92sXmd6ReZ9ekq4/8P1Sc5azlLMcIa1kgede5d6uyaYX1cnfYzAtG0582PSR/jQ/ldpvZkzmcmXzU0iNY2Hx8QUE3ekBcUzCrlJI4wDta0RpjWU/FpUn6GnGl43lU0ZPgXkj4ZDfgZO4yLN//Q/3wcqjiSeHEqsSH9PZ8jOIe3RPofn+3yNkHclljbTKkN2iigiiII2d8Y0timN5NdfTIBAYgzJOXO0yA38S9iCkD0hr4FXbasbfkZ6tb/YjzsdDnbJcLFDOVB/fUu/CpnYxYGXkDGRCnitu8xXmnTft8z48G3FQ30HPmCKtCwZ4VBsXZhBzjc6BRVgbpqSBF7dez1uNpqUNs/DfEI41t136SboX1RY1rAs8R2B2yORb/Jkxlld3BzMORe78HF4C1lbQLVu8wD47dYx6WJtxqLEM/O98ZRa4zrSJL8inHlbE5fqc9KVmcg6do1/oOYS6BDoz4ifsM8uJNE3EyNfLcw2JMG+KlU25vlHYKKMYqn777AIxDpDIyFj/4Iv5KNI8J18PmIgFNd37d8uet16LC9YZKW6orfFFmMy9JT8hKADM=
+  on:
+    tags: true
+    repo: SungardAS/generator-lambda-formation
+    node: 6

@@ -7,7 +7,7 @@
     "lamba-formation"
   ],
   "scripts": {
-    "dist": "zip -FSr dist/spotinst-lambda.zip * -x \"*.git*\" \"dist/*\""
+    "dist": "zip -FSr dist/lambda.zip * -x \"*.git*\" \"dist/*\""
   },
   "dependencies": {
     "aws-sdk": "^2.2.36",

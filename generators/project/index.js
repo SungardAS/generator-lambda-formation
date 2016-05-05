@@ -1,6 +1,7 @@
 'use strict';
-var yeoman = require('yeoman-generator');
+var mkdirp = require('mkdirp');
 var path = require('path');
+var yeoman = require('yeoman-generator');
 
 module.exports = yeoman.Base.extend({
   constructor: function () {
@@ -8,28 +9,24 @@ module.exports = yeoman.Base.extend({
 
     this.argument('projectName', {type: String, required: false});
   },
-  prompting: {
-
-    askForProjectName: function () {
+  prompting: function () {
+    var self = this;
+    if (!this.projectName) {
       var done = this.async();
-
-      if (this.projectName) {
-        return done();
-      }
-
-      var prompts = [{
+      this.prompt({
+        type: 'input',
         name: 'projectName',
-        message: 'What\'s the name of your project?'
-      }];
-
-      this.prompt(prompts, function (props) {
-        this.projectName = props.projectName;
-
+        message: 'Your project name',
+        default: ''
+      }).then(function (answers) {
+        self.projectName = answers.projectName;
         done();
-      }.bind(this));
+      });
     }
   },
   writing: function () {
+    mkdirp.sync(this.destinationPath(this.projectName, 'dist'));
+
     this.fs.copyTpl(
       this.templatePath('_package.json'),
       this.destinationPath(this.projectName, 'package.json'),
