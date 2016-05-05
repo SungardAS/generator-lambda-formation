@@ -19,19 +19,19 @@ var checkFiles = function () {
 
 describe('generator-lambda-formation:project', function () {
   describe('with prompt', function () {
-    before(function (done) {
-      helpers.run(path.join(__dirname, '../generators/project'))
+    before(function () {
+      return helpers.run(path.join(__dirname, '../generators/project'))
         .withPrompts({projectName: 'test'})
-        .on('end', done);
+        .toPromise();
     });
     checkFiles();
   });
 
   describe('with argument', function () {
-    before(function (done) {
-      helpers.run(path.join(__dirname, '../generators/project'))
+    before(function () {
+      return helpers.run(path.join(__dirname, '../generators/project'))
         .withArguments('test')
-        .on('end', done);
+        .toPromise();
     });
     checkFiles();
   });

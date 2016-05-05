@@ -7,28 +7,21 @@ module.exports = yeoman.Base.extend({
 
     this.argument('resourceName', {type: String, required: false});
   },
-  prompting: {
-
-    askForProjectName: function () {
+  prompting: function () {
+    var self = this;
+    if (!this.resourceName) {
       var done = this.async();
-
-      if (this.resourceName) {
-        return done();
-      }
-
-      var prompts = [{
+      this.prompt({
+        type: 'input',
         name: 'resourceName',
-        message: 'What\'s the name of your resource?'
-      }];
-
-      this.prompt(prompts, function (props) {
-        this.resourceName = props.resourceName;
-
+        message: 'Resource name',
+        default: ''
+      }).then(function (answers) {
+        self.resourceName = answers.resourceName;
         done();
-      }.bind(this));
+      });
     }
   },
-
   writing: function () {
     this.fs.copyTpl(
       this.templatePath('resource', '_index.js'),
