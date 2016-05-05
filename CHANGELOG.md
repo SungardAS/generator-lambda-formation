@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning][semver-url].
 ## [0.1.4] - 2016-05-05
 ### Added
 - create `dist` directory for a project and add it to .gitignore
+- use promises for prompting and tests
 
 ### Fixed
 - zip file name for npm script `dist`
