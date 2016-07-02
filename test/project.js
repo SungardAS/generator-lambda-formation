@@ -20,7 +20,7 @@ var checkFiles = function () {
 describe('generator-lambda-formation:project', function () {
   describe('with prompt', function () {
     before(function (done) {
-      return helpers.run(path.join(__dirname, '../generators/project'))
+      helpers.run(path.join(__dirname, '../generators/project'))
         .withPrompts({projectName: 'test'})
         .on('end', done);
     });
@@ -29,7 +29,7 @@ describe('generator-lambda-formation:project', function () {
 
   describe('with argument', function () {
     before(function (done) {
-      return helpers.run(path.join(__dirname, '../generators/project'))
+      helpers.run(path.join(__dirname, '../generators/project'))
         .withArguments('test')
         .on('end', done);
     });
