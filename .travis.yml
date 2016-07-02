@@ -2,9 +2,6 @@ language: node_js
 node_js:
 - 6
 - 5
-- 4
-- 4.3
-- '0.12'
 deploy:
   provider: npm
   email: as.us.labs@sungardas.com

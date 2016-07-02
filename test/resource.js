@@ -30,7 +30,6 @@ describe('generator-lambda-formation:resource', function () {
         .withArguments('test')
         .on('end', done);
     });
-
     checkFiles();
   });
 });
