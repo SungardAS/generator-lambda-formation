@@ -3,6 +3,11 @@ All notable changes to this project will be documented here in
 accordance with [Keep a CHANGELOG][keep-changelog-url].
 This project adheres to [Semantic Versioning][semver-url].
 
+## [0.1.6] - 2016-07-02
+### Fixed
+- generator was not being regonized on some node installations.  Rebased
+  from generator-generator to fix [#1]
+
 ## [0.1.5] - 2016-05-05
 ### Fixed
 - compatibility node <= 4

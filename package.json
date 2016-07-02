@@ -1,8 +1,8 @@
 {
   "name": "generator-lambda-formation",
-  "version": "0.1.6-beta.0",
+  "version": "0.1.6",
   "publishConfig": {
-    "tag": "beta"
+    "tag": "latest"
   },
   "description": "Yeoman generator for lambda-formation",
   "homepage": "",
