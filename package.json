@@ -1,53 +1,54 @@
 {
   "name": "generator-lambda-formation",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "publishConfig": {
     "tag": "latest"
   },
-  "description": "Yeoman generator for creating Lambda projects compatible with CloudFormation",
+  "description": "Yeoman generator for lambda-formation",
   "homepage": "",
-  "author": "kevin.mcgrath@sungardas.com",
+  "author": {
+    "name": "Kevin McGrath",
+    "email": "kevin.mcgrath@sungardas.com",
+    "url": ""
+  },
   "files": [
-    "app",
-    "router"
+    "generators"
   ],
-  "main": "index.js",
+  "main": "generators/index.js",
   "keywords": [
+    "lambda-formation",
     "yeoman-generator"
   ],
+  "dependencies": {
+    "yeoman-generator": "^0.23.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.0"
+  },
   "devDependencies": {
-    "eslint-config-xo": "^0.14.1",
+    "yeoman-test": "^1.0.0",
+    "yeoman-assert": "^2.0.0",
+    "eslint": "^2.1.0",
     "eslint-config-xo-space": "^0.13.0",
-    "gulp": "^3.9.1",
-    "gulp-coveralls": "^0.1.4",
+    "gulp": "^3.9.0",
     "gulp-eslint": "^2.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
-    "gulp-istanbul": "^0.10.4",
-    "gulp-mocha": "^2.2.0",
-    "gulp-nsp": "^2.4.0",
-    "gulp-plumber": "^1.1.0",
-    "mocha": "^2.4.5",
-    "yeoman-assert": "^2.2.1",
-    "yeoman-test": "^1.4.0"
+    "gulp-line-ending-corrector": "^1.0.1",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-coveralls": "^0.1.0"
   },
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "mkdirp": "^0.5.1",
-    "npm-name": "^3.0.0",
-    "underscore.string": "^3.3.4",
-    "yeoman-generator": "^0.23.3",
-    "yosay": "^1.1.1"
-  },
-  "scripts": {
-    "test": "gulp",
-    "prepublish": "gulp prepublish"
-  },
-  "license": "Apache-2.0",
   "eslintConfig": {
     "extends": "xo-space",
     "env": {
       "mocha": true
     }
   },
-  "repository": "SungardAS/generator-lambda-formation"
+  "repository": "SungardAS/generator-lambda-formation",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "gulp"
+  },
+  "license": "Apache-2.0"
 }

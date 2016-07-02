@@ -10,7 +10,7 @@ var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
 
 gulp.task('static', function () {
-  return gulp.src(['**/*.js'])
+  return gulp.src('**/*.js')
     .pipe(excludeGitignore())
     .pipe(eslint())
     .pipe(eslint.format())
@@ -54,7 +54,7 @@ gulp.task('coveralls', ['test'], function () {
     return;
   }
 
-  gulp.src(path.join(__dirname, 'coverage/lcov.info'))
+  return gulp.src(path.join(__dirname, 'coverage/lcov.info'))
     .pipe(coveralls());
 });
 
